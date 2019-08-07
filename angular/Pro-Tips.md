@@ -1,5 +1,26 @@
 # Pro Tips , Cheat Sheet, Call it whatever you want, if it helps you
 
+## #1 Always look for framework styleguide
+
+-   Always look into the framework styleguide.
+    -   Angular: <https://angular.io/guide/styleguide>
+    -   JavaScript Style guide: <https://github.com/airbnb/javascript>
+    -   CSS style guide: Always use rems as units instead of pixels. <https://github.com/airbnb/css>
+
+## #2 Can you manipulate the DOM directly '?'
+
+-   Yes, You can , but you could try not to.
+
+-   Do not directly manipulate DOM by using document or window object. Use the angular wrappers for document and window to get the values.
+
+-   **And for setting/removing the styles, attributes, please use the renderer class of angular.**
+
+Remember, Use Renderer Class inside components only and not in service classes. Because you will not get the dom instance to work with.
+
+## #3 Use Enum for definitive state values
+
+Whenever you have definite states to deal with, use ENUM.  It helps us in eliminating lot of if else branching statements.
+
 ## #4
 
 - Always try to import relevant functions only (i.e Destructure imports) and remove unused imports. Try not to use `import * from “../some-dir”;`. As * means all the exported functions of “some-dir”will be imported there. This will increase the bundle size.
